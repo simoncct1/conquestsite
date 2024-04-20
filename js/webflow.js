@@ -124,7 +124,6 @@ this in the docs: http://dev.apollodata.com/core/fragments.html#unique-names`):o
       authPassword: $authPassword
       inviteToken: $inviteToken
       captchaToken: $captchaToken
-      redirectPath: $redirectPath
       data: $data
     ) {
       user {
