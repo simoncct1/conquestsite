@@ -1,14 +1,13 @@
-
-var check = function() {
-    if (document.getElementById('password').value ==
-      document.getElementById('password_confirmation').value) {
-      document.getElementById('message').style.color = 'green';
-      document.getElementById('message').innerHTML = '';
-    } else {
-      document.getElementById('message').style.color = 'red';
-      document.getElementById('message').innerHTML = 'Les mots de passe ne correspondent pas';
-    }
-  }
+// var check = function() {
+//     if (document.getElementById('password').value ==
+//       document.getElementById('password_confirmation').value) {
+//       document.getElementById('message').style.color = 'green';
+//       document.getElementById('message').innerHTML = '';
+//     } else {
+//       document.getElementById('message').style.color = 'red';
+//       document.getElementById('message').innerHTML = 'Les mots de passe ne correspondent pas';
+//     }
+//   }
 /**
  * Helper function for POSTing data as JSON with fetch.
  *
@@ -19,9 +18,7 @@ var check = function() {
  */
 async function postFormDataAsJson({ url, formData }) {
 	const plainFormData = Object.fromEntries(formData.entries());
-    console.log(plainFormData);
 	const formDataJsonString = JSON.stringify(plainFormData);
-    console.log(formDataJsonString);
 	const fetchOptions = {
 		method: "POST",
 		headers: {
@@ -37,7 +34,10 @@ async function postFormDataAsJson({ url, formData }) {
 		const errorMessage = await response.text();
 		throw new Error(errorMessage);
 	}else{
-        // window.location.replace('/confirm.html')
+        // window.location.replace('/confirm.html');
+        document.getElementById('messageok').style.color = 'white';
+        document.getElementById('messageok').innerHTML = 'Message envoyé avec succès';
+       console.log('Message envoyé avec succès');
     }
 
 	return response.json();
@@ -60,9 +60,9 @@ async function handleFormSubmit(event) {
         console.log({ formData});
 		console.log({ responseData });
 	} catch (error) {
-        document.getElementById('message').innerHTML = 'Cette addresse email est déja utilisée';
+        // document.getElementById('message').innerHTML = 'Cette addresse email est déja utilisée';
     }
 }
 
-const exampleForm = document.getElementById("form");
+const exampleForm = document.getElementById("email-form");
 exampleForm.addEventListener("submit", handleFormSubmit);
