@@ -33,9 +33,9 @@ async function postFormDataAsJson({ url, formData }) {
 }
 
 /**
- * Event handler for a form submit event.
+ * 
  *
- * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+ * 
  *
  * @param {SubmitEvent} event
  */

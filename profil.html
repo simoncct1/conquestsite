@@ -48,7 +48,10 @@
           <div id="w-node-_491292a3-25a3-b44b-d5e7-7931c16f56d2-5d8d10fb">
             <h3 class="heading-3 heading-3---1-page-profil">CARTE MEMBRE</h3>
             <div class="carte">
-              <img id="pp" src="images/portraits-frr-p-500.png" alt="" srcset="">
+              <div id="imgfrm">
+                <img id="pp" src="images/portraits-frr-p-500.png" alt="" srcset="">
+                <img id="upload" src="images/upload.svg" alt="" srcset="">
+              </div>
               <ul class="paragraph">
                   <li>Nom/Prénom : <span class="prenom">sdsdd</span></li>
                   <li>Nom de code : <span class="ndc">sdsdsdsd</span></li>
@@ -63,6 +66,10 @@
             <h3 class="heading-3 heading-3---3-page-profil">BADGES</h3>
           </div><img src="images/box-badges.png" loading="lazy" alt="" class="image-26">
         </div>
+        <form action="" method="POST" enctype="multipart/form-data">
+          <input type="file" name="image">
+          <input type="submit" value="Upload">
+      </form>
       </div>
     </div>
   </section>
@@ -103,9 +110,8 @@
       <div class="footer-divider-two"></div>
       <div class="footer-bottom">
         <div class="footer-copyright">© 2022 Conquest. All rights reserved</div>
-        <div class="footer-legal-block">
-          <a href="#" class="footer-legal-link">Terms Of Use</a>
-          <a href="#" class="footer-legal-link">Politique de confidentialité</a>
+        <div class="footer-legal-block">         
+          <a href="/pol.html" class="footer-legal-link">Politique de confidentialité</a>
         </div>
       </div>
     </div>
