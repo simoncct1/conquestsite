@@ -29,6 +29,7 @@ ul{
     align-self: center;
 }
 
+
 @media screen and (max-width: 991px) 
 {
     .carte{
@@ -40,4 +41,20 @@ ul{
         justify-items: center;
         margin-left: 0px !important;
     }
+}
+
+p#deco{
+    color: white;
+    font-size: 18px !important;
+    font-family: Sharetechmono, sans-serif;
+    margin-left: -20px !important;
+    margin-top: 20px !important;
+    text-transform: uppercase;
+    text-decoration: underline !important;
+}
+span{
+    color: white;
+    font-size: 22px !important;
+    font-family: Sharetechmono, sans-serif;
+    text-transform: uppercase;
 }

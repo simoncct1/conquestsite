@@ -37,7 +37,7 @@ async function postFormDataAsJson({ url, formData }) {
 		const errorMessage = await response.text();
 		throw new Error(errorMessage);
 	}else{
-        // window.location.replace('/confirm.html')
+		
     }
 
 	return response.json();
@@ -59,6 +59,8 @@ async function handleFormSubmit(event) {
 		const responseData = await postFormDataAsJson({ url, formData });
         console.log({ formData});
 		console.log({ responseData });
+		const token = responseData.access_token;
+		localStorage.setItem("accessToken", token)
 	} catch (error) {
         document.getElementById('message').innerHTML = 'Cette addresse email est déja utilisée';
     }

@@ -1,6 +1,4 @@
-// const apiUrl = 'http://127.0.0.1:8000/user';
 
-// Make a GET request
 
 /**
  * Helper function for POSTing data as JSON with fetch.
