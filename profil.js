@@ -2,6 +2,7 @@
 
 const url = "http://127.0.0.1:8000/api/user"; // API URL
 const access_token = localStorage.getItem("accessToken");
+const pic = localStorage.getItem("pp");
 const method = "GET"; // Request method, change for what's needed
 replace();
 document.getElementById("deco").addEventListener('click',  function(){    
@@ -23,8 +24,10 @@ fetch(url, {
     }
 })  .then(response => response.json())
 .then(data => {
-    console.log(data);
-    document.getElementById("pp").setAttribute('src','/avatars/' + data.image);
+    console.log(data);    
+    if(!pic){document.getElementById("pp").setAttribute('src','/avatars/' + data.image);}else{
+        document.getElementById("pp").setAttribute('src', pic);
+    }
     document.getElementById("prenom").innerHTML = data.name;
     document.getElementById("ndc").innerHTML = data.ndc;
     document.getElementById("email").innerHTML = data.email;
@@ -50,6 +53,7 @@ document.getElementById("upp").addEventListener("change", function() {
         console.log(input.value);
         console.log(e.target.result)
         document.getElementById("pp").setAttribute('src', e.target.result);
+        localStorage.setItem('pp', e.target.result)
       }
   
       reader.readAsDataURL(input.files[0]);
@@ -57,3 +61,7 @@ document.getElementById("upp").addEventListener("change", function() {
     }
   }
 
+  document.getElementById('ok').addEventListener('click',function(e){
+    e.preventDefault();
+    window.location.replace('/profil');
+  })

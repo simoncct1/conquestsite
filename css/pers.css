@@ -14,7 +14,7 @@ ul{
     text-align: center !important;
     align-items: center !important;
     margin-top: 0px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 40px !important;
     padding: 0px !important;
     font-family: Rubikone, sans-serif !important;
     text-transform: uppercase !important;
@@ -33,7 +33,7 @@ ul{
     width: 60%;
     border: 1px solid white;
     border-radius: 5px;
-    margin: 20px;
+    margin: 40px;
     align-self: center;
     transition: filter 2s;
 }
