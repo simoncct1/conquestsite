@@ -4,6 +4,8 @@ const url = "http://127.0.0.1:8000/api/user"; // API URL
 const access_token = localStorage.getItem("accessToken");
 const pic = localStorage.getItem("pp");
 var id;
+var badges =new Array();
+
 const method = "GET"; // Request method, change for what's needed
 replace();
 document.getElementById("deco").addEventListener('click',  function(){    
@@ -34,9 +36,39 @@ fetch(url, {
     document.getElementById("ndc").innerHTML = data.ndc;
     document.getElementById("email").innerHTML = data.email;
     localStorage.setItem("id", data.id);
+    if(data.bdg1){
+      badges.push(data.bdg1);
+    }
+    if(data.bdg2){
+      badges.push(data.bdg2);
+    }
+    if(data.bdg3){
+      badges.push(data.bdg3);
+    }
+    if(data.bdg4){
+      badges.push(data.bdg4);
+    }
+    if(data.bdg5){
+      badges.push(data.bdg5);
+    }
+    fillBadges();
+    console.log(badges);
   })
 .catch(error => console.error('Error:', error));
-
+function fillBadges(){
+  var restants = document.querySelectorAll("#restants");
+  console.log(restants);
+  badges.forEach(badge => {
+    document.querySelector(".reu").innerHTML += "<img src='"+badge+"'>";
+    restants.forEach(restant =>{
+      if(restant.getAttribute('src') == badge){
+        restant.style.display= 'none'
+      };
+        
+    })
+  });
+ 
+}
 
 document.getElementById("imgfrm").addEventListener("click", function(){
     document.getElementById("avatar").style.display ='flex'

@@ -3,9 +3,37 @@
     border: 1px solid white;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.226);
-    max-width: 370px;
+    max-width: 350px;
     justify-items: center;
     margin-left: -20px !important;
+    padding: 20px;
+    margin-bottom: 20px;
+  
+}
+.heading-3.heading-3---3-page-profil{
+    margin-left: 0px !important;
+}
+.carte h3{
+    text-align: left !important;    
+    margin-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+.carte div{
+    padding: 20px;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px !important;
+}
+.reu img{
+    padding: 10px !important;
+}
+.rest img{
+    padding: 10px !important;
+    filter: blur(4px);
 }
 ul{
     display: inline-flex;
@@ -14,7 +42,6 @@ ul{
     text-align: center !important;
     align-items: center !important;
     margin-top: 0px !important;
-    margin-bottom: 40px !important;
     padding: 0px !important;
     font-family: Rubikone, sans-serif !important;
     text-transform: uppercase !important;
@@ -30,10 +57,9 @@ ul{
     
 }
 .carte img#pp{
-    width: 60%;
+    width: 80%;
     border: 1px solid white;
     border-radius: 5px;
-    margin: 40px;
     align-self: center;
     transition: filter 2s;
 }
@@ -73,7 +99,6 @@ p#deco{
     font-size: 18px !important;
     font-family: Sharetechmono, sans-serif;
     margin-left: -20px !important;
-    margin-top: 20px !important;
     text-transform: uppercase;
     text-decoration: underline !important;
 }
