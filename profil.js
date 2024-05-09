@@ -1,6 +1,6 @@
 
 
-const url = "http://127.0.0.1:8000/api/user"; // API URL
+const url = "https://api.conqueststories.be/api/user"; // API URL
 const access_token = localStorage.getItem("accessToken");
 const pic = localStorage.getItem("pp");
 var id;
@@ -29,7 +29,7 @@ fetch(url, {
 })  .then(response => response.json())
 .then(data => {
     console.log(data);    
-    if(!pic){document.getElementById("pp").setAttribute('src','http://127.0.0.1:5501/public/image/' + data.avatar);}else{
+    if(!pic){document.getElementById("pp").setAttribute('src','https://api.conqueststories.be/public/image/' + data.avatar);}else{
         document.getElementById("pp").setAttribute('src', pic);
     }
     document.getElementById("prenom").innerHTML = data.name;
@@ -82,7 +82,7 @@ document.getElementById("imgfrm").addEventListener("click", function(){
     const file = fileInput.files[0];
     const formData = new FormData();
     formData.append('avatar', file);
-    fetch('http://127.0.0.1:8000/user/' + id, {
+    fetch('https://api.conqueststories.be/user/' + id, {
       method: 'POST',
       body: formData
     })

@@ -156,9 +156,13 @@
   <script>
     document.querySelector('.complot').addEventListener('click', function(e){
         var mdp = prompt("Parcourez les méandres de nos instants figés, déchiffrez les indices dissimulés, et vous découvrirez le sésame qui dévoilera le chemin convoité.","XX/XX/XXXX");
+        var id = localStorage.getItem("id");
         if (mdp == '28/06/1914') {
             alert('Accès autorisé')
             document.querySelector('.secret').display = "block"
+                  fetch('https://api.conqueststories.be/user/badgesite/' + id, {
+            method: 'POST'
+          })
           }else{
             alert('Accès refusé')
             document.querySelector('.secret').display = "none"
